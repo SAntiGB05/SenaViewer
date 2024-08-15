@@ -15,8 +15,11 @@ public class Book {
     boolean readed;
     int timeReaded;
 
-    public static void see(){
-
+    public Book (String title,Date edititionDate, String editorial, int isbn){
+        this.title = title;
+        this.edititionDate = edititionDate;
+        this.editorial = editorial;
+        this.isbn = isbn;
     }
 
     public static void getters(){
