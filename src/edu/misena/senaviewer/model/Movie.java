@@ -13,8 +13,12 @@ public class Movie {
     boolean viewed;
     int timeViewed;
 
-    public static void see(){
-
+    public Movie(String title,String gender,String creator,int duration,short year){
+        this.title = title;
+        this.gender = gender;
+        this.creator = creator;
+        this.duration = duration;
+        this.year = year;
     }
 
     public static void getters(){
