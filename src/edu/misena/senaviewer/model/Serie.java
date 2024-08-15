@@ -14,8 +14,10 @@ public class Serie {
     int timeViewed;
     int sessionQuantity;
 
-    public static void see(){
-
+    public Serie( String title,String gender,int duration){
+        this.title = title;
+        this.gender = gender;
+        this.duration = duration;
     }
 
     public static void getters(){
