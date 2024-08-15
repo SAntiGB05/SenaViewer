@@ -9,7 +9,7 @@ public class Book {
 
     Date edititionDate;
     String editorial;
-    String authors;
+    String[] authors = new String[5];
 
     int isbn;
     boolean readed;
