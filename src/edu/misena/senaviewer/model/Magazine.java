@@ -8,7 +8,7 @@ public class Magazine {
     String title;
     Date edititionDate;
     String editorial;
-    String[] authors = new String[5];
+    String[] authors;
 
     public Magazine(String title,Date edititionDate,String editorial){
         this.title = title;
