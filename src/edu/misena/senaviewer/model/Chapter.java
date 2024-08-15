@@ -11,8 +11,10 @@ public class Chapter {
     int timeViewed;
     int sessionNumber;
 
-    public static void see(){
-
+    public Chapter (String title,int duration,short year){
+        this.title = title;
+        this.duration = duration;
+        this.year = year;
     }
 
     public static void getters(){
