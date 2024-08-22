@@ -20,6 +20,8 @@ public class Serie {
         this.duration = duration;
     }
 
+    Serie serie = new Serie("Spider-man", "Accion", 120);
+
     public int getId() {
         return id;
     }

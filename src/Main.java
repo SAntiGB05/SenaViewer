@@ -16,7 +16,9 @@ public class Main {
             message += "3. Movie\n";
             message += "4. Serie\n";
             message += "5. Magazine\n";
-            message += "6. Salir...\n\n";
+            message += "6. Report\n";
+            message += "7. Report Today\n";
+            message += "8. Salir...\n\n";
 
             System.out.println(message);
 
