@@ -1,4 +1,4 @@
-import edu.misena.senaviewer.model.Chapter;
+import edu.misena.senaviewer.model.*;
 
 import java.util.Scanner;
 
@@ -27,17 +27,25 @@ public class Main {
 
             switch (opcion){
                 case 1:
+                    Book.menuBook();
                     break;
                 case 2:
                     Chapter.menuChapter();
                     break;
                 case 3:
+                    Movie.menuMovie();
                     break;
                 case 4:
+                    Serie.menuSerie();
                     break;
                 case 5:
+                    Magazine.menuMagazine();
                     break;
                 case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
@@ -46,7 +54,6 @@ public class Main {
 
             }
 
-
-        }while(opcion !=6);
+        }while(opcion !=8);
     }
 }

@@ -19,7 +19,7 @@ public class Chapter {
         this.year = year;
     }
 
-    static Chapter chapter = new Chapter("El cahvo del 8", 20, (short) 2005);
+    static Chapter chapter = new Chapter("El chavo del 8", 20, (short) 2005);
 
     public int getId(){
         return id;
@@ -137,14 +137,10 @@ public class Chapter {
                     do{
                         String message2 = "\n\n!Bienvenido al Setter de Chapter¡\n\n";
 
-                        message2 += "1. id\n";
-                        message2 += "2. title\n";
-                        message2 += "3. duration\n";
-                        message2 += "4. year\n";
-                        message2 += "5. viewed\n";
-                        message2 += "6. timeViewed\n";
-                        message2 += "7. sessionNumber\n";
-                        message2 += "8. Salir...\n\n";
+                        message2 += "1. Actualizar titulo del capitulo\n";
+                        message2 += "2. Actualizar duration del capitulo\n";
+                        message2 += "3. Actualizar año del capitulo\n";
+                        message2 += "4. Salir...\n\n";
 
                         System.out.println(message2);
 
@@ -166,7 +162,7 @@ public class Chapter {
                                 break;
 
                         }
-                    }while(opcion2 !=6);
+                    }while(opcion2 !=4);
                     break;
                 case 3:
                     System.out.println("Saliendo del programa...");

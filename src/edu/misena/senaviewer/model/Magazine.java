@@ -1,20 +1,23 @@
 package edu.misena.senaviewer.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Magazine {
 
     int id;
     String title;
-    Date editionDate;
+    String editionDate;
     String editorial;
     String[] authors;
 
-    public Magazine(String title,Date edititionDate,String editorial){
+    public Magazine(String title,String edititionDate,String editorial){
         this.title = title;
         this.editionDate = edititionDate;
         this.editorial = editorial;
     }
+
+    static Magazine magazine = new Magazine("Vea", "05/23/2006", "JoseJose");
 
     public int getId() {
         return id;
@@ -32,11 +35,11 @@ public class Magazine {
         this.title = title;
     }
 
-    public Date getEditionDate() {
+    public String getEditionDate() {
         return editionDate;
     }
 
-    public void setEditionDate(Date editionDate) {
+    public void setEditionDate(String editionDate) {
         this.editionDate = editionDate;
     }
 
@@ -54,5 +57,105 @@ public class Magazine {
 
     public void setAuthors(String[] authors) {
         this.authors = authors;
+    }
+
+    public static void menuMagazine(){
+        Scanner scanner = new Scanner(System.in);
+
+        int opcion;
+
+        do{
+            String message = "\n\n!Bienvenido al menu de Magazine¡\n\n";
+
+            message += "1. Ver informacion\n";
+            message += "2. Actualizar informacion\n";
+            message += "3. Salir...\n\n";
+
+            System.out.println(message);
+
+            System.out.println("Elige tu Menu: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion){
+                case 1:
+                    int opcion1;
+
+                    do{
+                        String message1 = "\n\n!Bienvenido a la vista de Magazine¡\n\n";
+
+                        message1 += "1. Ver titulo del Magazine\n";
+                        message1 += "2. Ver duracuion del Magazine\n";
+                        message1 += "3. Ver año del Serie\n";
+                        message1 += "4. Salir...\n\n";
+
+                        System.out.println(message1);
+
+                        System.out.println("Elige tu opcion: ");
+                        opcion1 = scanner.nextInt();
+
+                        switch (opcion1){
+                            case 1:
+                                System.out.println("El titulo de la revista es: " + magazine.getTitle());
+                                break;
+                            case 2:
+                                System.out.println("La fecha de la revista es: " + magazine.getEditionDate());
+                                break;
+                            case 3:
+                                System.out.println("La editorial de la revista es: " + magazine.getEditorial());
+                                break;
+                            case 4:
+                                System.out.println("Saliendo del programa...");
+                                break;
+                            default:
+                                System.out.println("Ingrese una opción valida");
+                                break;
+
+                        }
+                    }while(opcion1 !=4);
+                    break;
+                case 2:
+                    int opcion2;
+
+                    do{
+                        String message2 = "\n\n!Bienvenido al Setter de Chapter¡\n\n";
+
+                        message2 += "1. Actualizar titulo del capitulo\n";
+                        message2 += "2. Actualizar duration del capitulo\n";
+                        message2 += "3. Actualizar año del capitulo\n";
+                        message2 += "4. Salir...\n\n";
+
+                        System.out.println(message2);
+
+                        System.out.println("Elige tu opcion: ");
+                        opcion2 = scanner.nextInt();
+
+                        switch (opcion2){
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                System.out.println("Saliendo del programa...");
+                                break;
+                            default:
+                                System.out.println("Ingrese una opción valida");
+                                break;
+
+                        }
+                    }while(opcion2 !=4);
+                    break;
+                case 3:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Ingrese una opción valida");
+                    break;
+
+            }
+
+        }while(opcion !=3);
+
     }
 }

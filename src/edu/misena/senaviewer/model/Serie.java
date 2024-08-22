@@ -1,18 +1,20 @@
 package edu.misena.senaviewer.model;
 
+import java.util.Scanner;
+
 public class Serie {
 
-    int id;
-    String title;
+    static int id;
+    static String title;
 
-    String gender;
-    String creator;
-    int duration;
-    short year;
+    static String gender;
+    static String creator;
+    static int duration;
+    static short year;
 
-    boolean viewed;
-    int timeViewed;
-    int sessionQuantity;
+    static boolean viewed;
+    static int timeViewed;
+    static int sessionQuantity;
 
     public Serie( String title,String gender,int duration){
         this.title = title;
@@ -20,9 +22,9 @@ public class Serie {
         this.duration = duration;
     }
 
-    Serie serie = new Serie("Spider-man", "Accion", 120);
+    static Serie serie = new Serie("Spider-man", "Accion", 120);
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
@@ -30,7 +32,7 @@ public class Serie {
         this.id = id;
     }
 
-    public String getTitle() {
+    public static String getTitle() {
         return title;
     }
 
@@ -38,7 +40,7 @@ public class Serie {
         this.title = title;
     }
 
-    public String getGender() {
+    public static String getGender() {
         return gender;
     }
 
@@ -46,7 +48,7 @@ public class Serie {
         this.gender = gender;
     }
 
-    public String getCreator() {
+    public static String getCreator() {
         return creator;
     }
 
@@ -54,7 +56,7 @@ public class Serie {
         this.creator = creator;
     }
 
-    public int getDuration() {
+    public static int getDuration() {
         return duration;
     }
 
@@ -62,7 +64,7 @@ public class Serie {
         this.duration = duration;
     }
 
-    public short getYear() {
+    public static short getYear() {
         return year;
     }
 
@@ -70,7 +72,7 @@ public class Serie {
         this.year = year;
     }
 
-    public boolean getViewed() {
+    public static boolean getViewed() {
         return viewed;
     }
 
@@ -78,7 +80,7 @@ public class Serie {
         this.viewed = viewed;
     }
 
-    public int getTimeViewed() {
+    public static int getTimeViewed() {
         return timeViewed;
     }
 
@@ -86,11 +88,111 @@ public class Serie {
         this.timeViewed = timeViewed;
     }
 
-    public int getSessionQuantity() {
+    public static int getSessionQuantity() {
         return sessionQuantity;
     }
 
     public void setSessionQuantity(int sessionQuantity) {
         this.sessionQuantity = sessionQuantity;
+    }
+
+    public static void menuSerie(){
+        Scanner scanner = new Scanner(System.in);
+
+        int opcion;
+
+        do{
+            String message = "\n\n!Bienvenido al menu de Serie¡\n\n";
+
+            message += "1. Ver informacion\n";
+            message += "2. Actualizar informacion\n";
+            message += "3. Salir...\n\n";
+
+            System.out.println(message);
+
+            System.out.println("Elige tu Menu: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion){
+                case 1:
+                    int opcion1;
+
+                    do{
+                        String message1 = "\n\n!Bienvenido a la vista de Serie¡\n\n";
+
+                        message1 += "1. Ver titulo del Serie\n";
+                        message1 += "2. Ver duracuion del Serie\n";
+                        message1 += "3. Ver año del Serie\n";
+                        message1 += "4. Salir...\n\n";
+
+                        System.out.println(message1);
+
+                        System.out.println("Elige tu opcion: ");
+                        opcion1 = scanner.nextInt();
+
+                        switch (opcion1){
+                            case 1:
+                                System.out.println("El titulo de la Serie es: " + serie.getTitle());
+                                break;
+                            case 2:
+                                System.out.println("El genero de la Serie es: " + serie.getGender());
+                                break;
+                            case 3:
+                                System.out.println("La duracion de la Serie es: " + serie.getDuration());
+                                break;
+                            case 4:
+                                System.out.println("Saliendo del programa...");
+                                break;
+                            default:
+                                System.out.println("Ingrese una opción valida");
+                                break;
+
+                        }
+                    }while(opcion1 !=4);
+                    break;
+                case 2:
+                    int opcion2;
+
+                    do{
+                        String message2 = "\n\n!Bienvenido al Setter de Chapter¡\n\n";
+
+                        message2 += "1. Actualizar titulo del capitulo\n";
+                        message2 += "2. Actualizar duration del capitulo\n";
+                        message2 += "3. Actualizar año del capitulo\n";
+                        message2 += "4. Salir...\n\n";
+
+                        System.out.println(message2);
+
+                        System.out.println("Elige tu opcion: ");
+                        opcion2 = scanner.nextInt();
+
+                        switch (opcion2){
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                System.out.println("Saliendo del programa...");
+                                break;
+                            default:
+                                System.out.println("Ingrese una opción valida");
+                                break;
+
+                        }
+                    }while(opcion2 !=4);
+                    break;
+                case 3:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Ingrese una opción valida");
+                    break;
+
+            }
+
+        }while(opcion !=3);
+
     }
 }
