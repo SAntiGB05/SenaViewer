@@ -104,7 +104,8 @@ public class Chapter {
                         message1 += "1. Ver titulo del capitulo\n";
                         message1 += "2. Ver duracuion del capitulo\n";
                         message1 += "3. Ver año del capitulo\n";
-                        message1 += "4. Salir...\n\n";
+                        message1 += "4. Ver toda la informacion\n";
+                        message1 += "5. Salir...\n\n";
 
                         System.out.println(message1);
 
@@ -122,6 +123,12 @@ public class Chapter {
                                 System.out.println("El año del capitulo es: " + chapter.getYear());
                                 break;
                             case 4:
+                                System.out.println("Informacion del capitulo:");
+                                System.out.println("titulo: " + chapter.getTitle());
+                                System.out.println("fecha: " + chapter.getDuration());
+                                System.out.println("editorial: " + chapter.getYear());
+                                break;
+                            case 5:
                                 System.out.println("Saliendo del programa...");
                                 break;
                             default:
@@ -129,7 +136,7 @@ public class Chapter {
                                 break;
 
                         }
-                    }while(opcion1 !=4);
+                    }while(opcion1 !=5);
                     break;
                 case 2:
                     int opcion2;
@@ -175,5 +182,19 @@ public class Chapter {
 
         }while(opcion !=3);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", isbn=" + title +
+                ", readed=" + duration +
+                ", timeReaded=" + year +
+                ", timeReaded=" + viewed +
+                ", timeReaded=" + timeViewed +
+                ", timeReaded=" + sessionNumber +
+                ", " + super.toString() +
+                '}';
     }
 }

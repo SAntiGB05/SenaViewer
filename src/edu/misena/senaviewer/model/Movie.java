@@ -49,7 +49,8 @@ public class Movie extends Film{
                         message1 += "3. Ver autor de la pelicula\n";
                         message1 += "4. Ver duracion de la pelicula\n";
                         message1 += "5. Ver año del capitulo\n";
-                        message1 += "6. Salir...\n\n";
+                        message1 += "6. Ver toda la informacion\n";
+                        message1 += "7. Salir...\n\n";
 
                         System.out.println(message1);
 
@@ -73,6 +74,14 @@ public class Movie extends Film{
                                 System.out.println("El año de la pelicula es: " + getYear());
                                 break;
                             case 6:
+                                System.out.println("Informacion de la pelicula:");
+                                System.out.println("titulo: " + getTitle());
+                                System.out.println("genero: " + getGender());
+                                System.out.println("autor: " + getCreator());
+                                System.out.println("duracion: " + getDuration());
+                                System.out.println("año: " + getYear());
+                                break;
+                            case 7:
                                 System.out.println("Saliendo del programa...");
                                 break;
                             default:
@@ -80,7 +89,7 @@ public class Movie extends Film{
                                 break;
 
                         }
-                    }while(opcion1 !=6);
+                    }while(opcion1 !=7);
                     break;
                 case 2:
                     int opcion2;
@@ -126,5 +135,13 @@ public class Movie extends Film{
 
         }while(opcion !=3);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "timeViewed=" + timeViewed +
+                ", " + super.toString() +
+                '}';
     }
 }

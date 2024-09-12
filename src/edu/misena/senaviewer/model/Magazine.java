@@ -48,7 +48,8 @@ public class Magazine extends Publication{
                         message1 += "1. Ver titulo del Magazine\n";
                         message1 += "2. Ver duracuion del Magazine\n";
                         message1 += "3. Ver año del Serie\n";
-                        message1 += "4. Salir...\n\n";
+                        message1 += "4. Ver toda la informacion\n";
+                        message1 += "5. Salir...\n\n";
 
                         System.out.println(message1);
 
@@ -66,6 +67,12 @@ public class Magazine extends Publication{
                                 System.out.println("La editorial de la revista es: " + getEditorial());
                                 break;
                             case 4:
+                                System.out.println("Informacion de la revista:");
+                                System.out.println("titulo: " + getTitle());
+                                System.out.println("fecha: " + getEditionDate());
+                                System.out.println("editorial: " + getEditorial());
+                                break;
+                            case 5:
                                 System.out.println("Saliendo del programa...");
                                 break;
                             default:
@@ -73,7 +80,7 @@ public class Magazine extends Publication{
                                 break;
 
                         }
-                    }while(opcion1 !=4);
+                    }while(opcion1 !=5);
                     break;
                 case 2:
                     int opcion2;
@@ -119,5 +126,12 @@ public class Magazine extends Publication{
 
         }while(opcion !=3);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                super.toString() +
+                '}';
     }
 }

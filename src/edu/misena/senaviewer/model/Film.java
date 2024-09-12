@@ -85,4 +85,17 @@ public class Film {
     public void setViewed(boolean viewed) {
         this.viewed = viewed;
     }
+
+    @Override
+    public String toString() {
+        return "publication{" +
+                ", id=" + id +
+                "title=" + title +
+                ", id=" + gender +
+                ", creator=" + creator +
+                ", duration=" + duration +
+                ", year=" + year +
+                ", viewed=" + viewed +
+                '}';
+    }
 }

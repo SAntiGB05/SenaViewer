@@ -5,16 +5,17 @@ import java.util.Scanner;
 
 
 public class Book extends Publication {
-     static int isbn;
-     boolean readed;
-     int timeReaded;
+    int id;
+    static int isbn;
+    boolean readed;
+    int timeReaded;
 
     public Book(String title, String editionDate, String editorial, int isbn) {
         super(title, editionDate, editorial);
         this.isbn = isbn;
     }
 
-    static Book book = new Book("Narnia", "Fantasia", "holaMundo", 125452214);
+    static Book book = new Book("Narnia", "12/09/2024", "holaMundo", 125452214);
 
     public static int getIsbn() {
         return isbn;
@@ -44,7 +45,8 @@ public class Book extends Publication {
                         message1 += "2. Ver fecha de edición del libro\n";
                         message1 += "3. Ver editorial del libro\n";
                         message1 += "4. Ver ISBN del libro\n";
-                        message1 += "5. Salir...\n\n";
+                        message1 += "5. Ver toda la informacion\n";
+                        message1 += "6. Salir...\n\n";
 
                         System.out.println(message1);
                         System.out.print("Elige tu opción: ");
@@ -64,13 +66,20 @@ public class Book extends Publication {
                                 System.out.println("El ISBN del libro es: " + getIsbn());
                                 break;
                             case 5:
+                                System.out.println("Informacion del libro:");
+                                System.out.println("titulo: " + getTitle());
+                                System.out.println("fecha de edición: " + getEditionDate());
+                                System.out.println("editorial: " + getEditorial());
+                                System.out.println("ISBN: " + getIsbn());
+                                break;
+                            case 6:
                                 System.out.println("Saliendo del menú de información...");
                                 break;
                             default:
                                 System.out.println("Ingrese una opción válida");
                                 break;
                         }
-                    } while (opcion1 != 5);
+                    } while (opcion1 != 6);
                     break;
 
                 case 2:
@@ -120,6 +129,17 @@ public class Book extends Publication {
                     break;
             }
         } while (opcion != 3);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", isbn=" + isbn +
+                ", readed=" + readed +
+                ", timeReaded=" + timeReaded +
+                ", " + super.toString() +
+                '}';
     }
 
 }

@@ -56,7 +56,8 @@ public class Serie extends Film{
                         message1 += "1. Ver titulo del Serie\n";
                         message1 += "2. Ver duracuion del Serie\n";
                         message1 += "3. Ver año del Serie\n";
-                        message1 += "4. Salir...\n\n";
+                        message1 += "4. Ver toda la informacion\n";
+                        message1 += "5. Salir...\n\n";
 
                         System.out.println(message1);
 
@@ -74,6 +75,12 @@ public class Serie extends Film{
                                 System.out.println("La duracion de la Serie es: " + getDuration());
                                 break;
                             case 4:
+                                System.out.println("Informacion de la serie:");
+                                System.out.println("titulo: " + getTitle());
+                                System.out.println("genero: " + getGender());
+                                System.out.println("duracion: " + getDuration());
+                                break;
+                            case 5:
                                 System.out.println("Saliendo del programa...");
                                 break;
                             default:
@@ -81,7 +88,7 @@ public class Serie extends Film{
                                 break;
 
                         }
-                    }while(opcion1 !=4);
+                    }while(opcion1 !=5);
                     break;
                 case 2:
                     int opcion2;
@@ -127,5 +134,14 @@ public class Serie extends Film{
 
         }while(opcion !=3);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "timeViewed=" + timeViewed +
+                ", sessionQuantity=" + sessionQuantity +
+                ", " + super.toString() +
+                '}';
     }
 }

@@ -48,4 +48,14 @@ public class Publication {
             this.authors = authors;
         }
     }
+
+    @Override
+    public String toString() {
+        return "publication{" +
+                "title=" + title +
+                ", edition Date=" + editionDate +
+                ", editorial=" + editorial +
+                ", authors=" + authors +
+                '}';
+    }
 }
