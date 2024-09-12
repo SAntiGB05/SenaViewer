@@ -2,83 +2,16 @@ package edu.misena.senaviewer.model;
 
 import java.util.Scanner;
 
-public class Serie {
+public class Serie extends Film{
 
-    static int id;
-    static String title;
-
-    static String gender;
-    static String creator;
-    static int duration;
-    static short year;
-
-    static boolean viewed;
     static int timeViewed;
     static int sessionQuantity;
 
     public Serie( String title,String gender,int duration){
-        this.title = title;
-        this.gender = gender;
-        this.duration = duration;
+        super(title, gender, duration);
     }
 
     static Serie serie = new Serie("Spider-man", "Accion", 120);
-
-    public static int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public static String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public static String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public static String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
-    public static int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public static short getYear() {
-        return year;
-    }
-
-    public void setYear(short year) {
-        this.year = year;
-    }
-
-    public static boolean getViewed() {
-        return viewed;
-    }
-
-    public void setViewed(boolean viewed) {
-        this.viewed = viewed;
-    }
 
     public static int getTimeViewed() {
         return timeViewed;
@@ -132,13 +65,13 @@ public class Serie {
 
                         switch (opcion1){
                             case 1:
-                                System.out.println("El titulo de la Serie es: " + serie.getTitle());
+                                System.out.println("El titulo de la Serie es: " + getTitle());
                                 break;
                             case 2:
-                                System.out.println("El genero de la Serie es: " + serie.getGender());
+                                System.out.println("El genero de la Serie es: " + getGender());
                                 break;
                             case 3:
-                                System.out.println("La duracion de la Serie es: " + serie.getDuration());
+                                System.out.println("La duracion de la Serie es: " + getDuration());
                                 break;
                             case 4:
                                 System.out.println("Saliendo del programa...");

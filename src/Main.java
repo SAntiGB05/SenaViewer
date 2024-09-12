@@ -41,9 +41,9 @@ public class Main {
                 case 5:
                     Magazine.menuMagazine();
                     break;
-                case 6:
+                case 6: System.out.println("Report");
                     break;
-                case 7:
+                case 7: System.out.println("Report Today");
                     break;
                 case 8:
                     System.out.println("Saliendo del programa...");
